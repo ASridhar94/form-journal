@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#eff3eb">
+<meta name="description" content="Your illustrated workout tracker with a flexible training calendar, editable history, and offline set logging.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Form Journal">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./assets/icons/icon-192.png">
+<link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png">
+<link rel="stylesheet" href="./styles.css">
+<title>Form Journal — Four-day workout companion</title>
+</head>
+<body>
+<div id="app" class="shell">
+  <header class="topbar">
+    <a class="identity" href="#today" aria-label="Form Journal home"><span class="symbol" aria-hidden="true">F<span class="symbol-dot">•</span></span><span class="brand"><b>FORM JOURNAL</b><small>Strength, one session at a time</small></span></a>
+    <div class="top-actions"><span class="quiet-badge">PRIVATE · ON THIS DEVICE</span><button class="header-link" type="button" data-nav="settings" aria-label="Open settings">Settings <span aria-hidden="true">↗</span></button></div>
+  </header>
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+      <div class="side-label">YOUR SPACE</div>
+      <nav class="nav-stack">
+        <button type="button" data-nav="today" class="nav-link active"><span class="nav-icon">◈</span>Today</button>
+        <button type="button" data-nav="program" class="nav-link"><span class="nav-icon">▤</span>Program</button>
+        <button type="button" data-nav="calendar" class="nav-link"><span class="nav-icon">▦</span>Calendar</button>
+        <button type="button" data-nav="progress" class="nav-link"><span class="nav-icon">↗</span>Progress</button>
+        <button type="button" data-nav="settings" class="nav-link"><span class="nav-icon">⚙</span>Settings</button>
+      </nav>
+      <div class="side-label days-title">YOUR FOUR DAYS</div>
+      <div id="sidebar-days" class="sidebar-days"><span class="loading">Loading days…</span></div>
+      <div class="side-note"><span class="side-note-icon">✳</span><div><b>Form over numbers.</b><p>Choose a manageable load, breathe and move with control.</p></div></div>
+    </aside>
+    <main class="content" id="main-content" tabindex="-1" aria-live="polite"><section class="loading-screen"><p class="eyebrow">YOUR PERSONAL TRAINING SPACE</p><h1>Preparing your program…</h1><p>Loading your illustrated exercise guide and journal.</p></section></main>
+  </div>
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <button type="button" data-nav="today"><span aria-hidden="true">◈</span>Today</button>
+    <button type="button" data-nav="program"><span aria-hidden="true">▤</span>Workouts</button>
+    <button type="button" data-nav="calendar"><span aria-hidden="true">▦</span>Calendar</button>
+    <button type="button" data-nav="progress"><span aria-hidden="true">↗</span>Progress</button>
+    <button type="button" data-nav="settings"><span aria-hidden="true">⚙</span>Settings</button>
+  </nav>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script type="module" src="./app.js"></script>
+</body>
+</html>
